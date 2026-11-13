@@ -167,6 +167,11 @@
         invite.appendChild(label);
         invite.appendChild(link);
         invite.classList.add("show");
+      } else if(token) {
+        var invalid=document.createElement("p");
+        invalid.textContent="This invitation link does not look valid. Ask the group member to send you a new one.";
+        invite.appendChild(invalid);
+        invite.classList.add("show");
       }
     })();
   </script>

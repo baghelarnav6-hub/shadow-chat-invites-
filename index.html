@@ -1,72 +1,178 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#17181b">
-  <title>Join ShadowChat</title>
+  <meta name="theme-color" content="#08110f">
+  <meta name="description" content="Meet ShadowChat, an Android chat app for conversations with your people. Explore the app and get the official Android release.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://baghelarnav6-hub.github.io/shadow-chat-invites-/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ShadowChat">
+  <meta property="og:title" content="ShadowChat — conversations with your people">
+  <meta property="og:description" content="Meet ShadowChat, an Android chat app for conversations with your people.">
+  <meta property="og:url" content="https://baghelarnav6-hub.github.io/shadow-chat-invites-/">
+  <meta name="twitter:card" content="summary">
+  <title>ShadowChat — conversations with your people</title>
   <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      background: #17181b;
-      color: #f2f3f5;
-      font-family: Arial, sans-serif;
-    }
-    main {
-      width: min(340px, 85%);
-      padding: 28px;
-      border: 1px solid #393d44;
-      border-radius: 20px;
-      background: #202226;
-      text-align: center;
-    }
-    h1 { letter-spacing: 3px; }
-    p { color: #a4a8b0; line-height: 1.6; }
-    a {
-      display: block;
-      margin-top: 22px;
-      padding: 15px;
-      border-radius: 12px;
-      background: #c5c8ce;
-      color: #17181b;
-      font-weight: bold;
-      text-decoration: none;
-    }
-    #error { color: #ff8a8a; }
+    :root{color-scheme:dark;--bg:#08110f;--panel:#101b18;--panel2:#14221e;--line:#263831;--text:#f2f7f3;--muted:#9aada3;--mint:#9df2ce;--mint2:#65d7aa;--ink:#0b1711;--serif:Georgia,"Times New Roman",serif;--sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:82px}
+    body{margin:0;background:radial-gradient(ellipse at 75% 15%,#17352a 0,transparent 33rem),var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.6}
+    a{color:inherit}
+    a:focus-visible,summary:focus-visible{outline:3px solid var(--mint);outline-offset:4px;border-radius:4px}
+    .skip{position:absolute;top:-60px;left:12px;padding:10px 14px;background:var(--mint);color:var(--ink);z-index:10}.skip:focus{top:12px}
+    .wrap{width:min(1120px,calc(100% - 40px));margin-inline:auto}
+    header{position:sticky;top:0;z-index:4;border-bottom:1px solid #ffffff12;background:#08110feF;backdrop-filter:blur(14px)}
+    .nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:inline-flex;align-items:center;gap:11px;text-decoration:none;font-weight:750;letter-spacing:.02em}
+    .logo{width:36px;height:36px;border-radius:12px;display:grid;place-items:center;background:var(--mint);color:var(--ink);font-size:18px;font-weight:900;box-shadow:0 0 28px #9df2ce28}
+    .navlinks{display:flex;align-items:center;gap:26px}.navlinks a{text-decoration:none;color:var(--muted);font-size:14px}.navlinks a:hover{color:var(--text)}
+    .button{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 20px;border-radius:999px;background:var(--mint);color:var(--ink);font-weight:750;text-decoration:none;transition:transform .18s ease,background .18s ease}.button:hover{transform:translateY(-2px);background:#b8ffdf}
+    .button.outline{background:transparent;color:var(--text);border:1px solid var(--line)}.button.outline:hover{border-color:var(--mint);background:#9df2ce0d}
+    .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center;padding:96px 0 88px;min-height:620px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--mint);font-size:12px;font-weight:800;letter-spacing:.15em;text-transform:uppercase}.dot{width:7px;height:7px;border-radius:50%;background:var(--mint);box-shadow:0 0 14px var(--mint)}
+    h1,h2,h3,p{margin-top:0}h1{font-family:var(--serif);font-size:clamp(3.2rem,7vw,6.3rem);line-height:.99;letter-spacing:-.055em;font-weight:500;margin:22px 0}.italic{color:var(--mint);font-style:italic}
+    .lead{max-width:520px;color:#b2c0b8;font-size:18px;line-height:1.75}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.fine{margin:14px 0 0;color:#81958a;font-size:12px}
+    .visual{position:relative;min-height:450px;display:grid;place-items:center}
+    .orbit{position:absolute;width:min(420px,100%);aspect-ratio:1;border:1px solid #9df2ce20;border-radius:50%;box-shadow:0 0 100px #40b98212,inset 0 0 80px #40b9820a}
+    .orbit:before,.orbit:after{content:"";position:absolute;border:1px solid #9df2ce14;border-radius:50%;inset:28px}.orbit:after{inset:62px}
+    .spark{position:absolute;width:8px;height:8px;border-radius:50%;background:var(--mint);box-shadow:0 0 20px var(--mint)}.spark.one{top:17%;right:20%}.spark.two{bottom:21%;left:14%;width:5px;height:5px}
+    .phone{position:relative;width:260px;padding:11px;border:1px solid #b9d6c541;border-radius:34px;background:linear-gradient(145deg,#20332b,#0c1713 65%);box-shadow:0 34px 100px #0009,0 0 50px #9df2ce16;transform:rotate(3deg)}
+    .screen{overflow:hidden;min-height:410px;border:1px solid #ffffff0c;border-radius:25px;background:#0d1713}
+    .screen-top{display:flex;justify-content:space-between;align-items:center;padding:18px 17px 14px;border-bottom:1px solid #ffffff0c;font-size:12px;color:#9aada3}
+    .screen-name{display:flex;align-items:center;gap:8px;color:#edf5ef;font-weight:700;font-size:13px}.mini-logo{width:23px;height:23px;border-radius:8px;background:var(--mint);color:var(--ink);display:grid;place-items:center;font-size:12px;font-weight:900}
+    .chat-label{padding:18px 17px 4px;color:#72877b;text-transform:uppercase;letter-spacing:.13em;font-size:9px;font-weight:800}
+    .thread{display:flex;align-items:center;gap:11px;padding:14px 16px;border-bottom:1px solid #ffffff09}
+    .avatar{width:39px;height:39px;display:grid;place-items:center;border-radius:15px;background:#203a30;color:var(--mint);font-size:12px;font-weight:800}
+    .thread-copy{min-width:0;flex:1}.thread-title{font-size:12px;font-weight:700}.thread-sub{font-size:10px;color:#82968a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.time{font-size:9px;color:#71857a}
+    .invite-chip{margin:17px 15px;padding:13px;border:1px solid #9df2ce2b;border-radius:14px;background:#9df2ce0a;color:#bbd0c3;font-size:10px}.invite-chip strong{display:block;color:var(--mint);font-size:11px;margin-bottom:3px}
+    .status{display:flex;gap:6px;align-items:center;color:#7c9485;font-size:9px;padding:0 16px}.status i{width:5px;height:5px;border-radius:50%;background:var(--mint2)}
+    .float-note{position:absolute;right:0;bottom:36px;display:flex;gap:11px;align-items:center;padding:13px 16px;border:1px solid #34483d;border-radius:16px;background:#14211b;box-shadow:0 18px 45px #0007;font-size:12px;color:#c5d2c9}.float-icon{width:32px;height:32px;border-radius:11px;display:grid;place-items:center;background:#9df2ce18;color:var(--mint)}
+    .section{padding:92px 0;border-top:1px solid #ffffff0c}.section-head{max-width:670px;margin-bottom:40px}.kicker{color:var(--mint);font-size:11px;font-weight:800;letter-spacing:.15em;text-transform:uppercase}.section h2{font-family:var(--serif);font-size:clamp(2.2rem,4vw,3.8rem);letter-spacing:-.04em;font-weight:500;line-height:1.07;margin:14px 0}.section-intro{color:var(--muted);font-size:16px;max-width:610px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{padding:25px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,#14211b,#0d1713);min-height:205px}.card-icon{width:40px;height:40px;border-radius:13px;display:grid;place-items:center;color:var(--mint);background:#9df2ce12;margin-bottom:20px;font-size:18px}.card h3{font-size:17px;margin-bottom:8px}.card p{color:var(--muted);font-size:14px;margin:0}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:step}.step{border-top:1px solid #3a5145;padding-top:19px}.step:before{counter-increment:step;content:"0" counter(step);display:block;color:var(--mint);font-size:12px;letter-spacing:.12em;font-weight:800;margin-bottom:18px}.step h3{font-size:18px;margin-bottom:8px}.step p{font-size:14px;color:var(--muted)}
+    .download-band{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:space-between;gap:30px;padding:42px;border:1px solid #9df2ce2e;border-radius:26px;background:radial-gradient(ellipse at 85% 50%,#9df2ce18,transparent 35%),#101b17}
+    .download-band h2{font-family:var(--serif);font-size:clamp(2rem,4vw,3.25rem);line-height:1.05;margin:10px 0}.download-band p{color:var(--muted);margin:0}
+    .faq{max-width:800px}.faq details{border-bottom:1px solid var(--line);padding:20px 0}.faq summary{cursor:pointer;list-style:none;font-weight:700;display:flex;justify-content:space-between;gap:20px}.faq summary::-webkit-details-marker{display:none}.faq summary:after{content:"+";color:var(--mint);font-size:20px;line-height:1}.faq details[open] summary:after{content:"−"}.faq details p{padding:12px 25px 0 0;color:var(--muted);font-size:14px;margin-bottom:0}
+    footer{padding:34px 0 42px;border-top:1px solid #ffffff12;color:#82958b;font-size:13px}.foot{display:flex;align-items:center;justify-content:space-between;gap:20px}.footlinks{display:flex;gap:20px;flex-wrap:wrap}.footlinks a{color:#aebdb4;text-decoration:none}.footlinks a:hover{color:var(--mint)}
+    .invite{display:none;margin:22px auto 0;padding:16px 18px;max-width:620px;border:1px solid #9df2ce66;border-radius:16px;background:#13241c}.invite.show{display:flex;justify-content:space-between;align-items:center;gap:16px}.invite p{margin:0;color:#c7d8cc;font-size:14px}.invite strong{color:var(--mint);display:block}.invite a{white-space:nowrap}
+    @media(max-width:760px){.wrap{width:min(100% - 32px,560px)}.nav{min-height:64px}.navlinks{gap:14px}.navlinks a:not(.button){display:none}.navlinks .button{min-height:41px;padding:0 15px;font-size:13px}.hero{grid-template-columns:1fr;gap:8px;padding:70px 0 62px;min-height:auto}.hero-copy{text-align:center}.hero-copy .lead{margin-inline:auto}.hero-copy .actions{justify-content:center}.hero-copy .eyebrow{justify-content:center}h1{font-size:clamp(3.25rem,14vw,5.2rem)}.visual{min-height:400px}.phone{width:238px}.screen{min-height:380px}.float-note{right:0;bottom:12px}.section{padding:68px 0}.cards{grid-template-columns:1fr}.card{min-height:auto}.steps{grid-template-columns:1fr;gap:12px}.step{padding:17px 0 0}.step:before{margin-bottom:9px}.download-band{padding:28px;align-items:flex-start;flex-direction:column}.foot{align-items:flex-start;flex-direction:column}.invite.show{align-items:flex-start;flex-direction:column}}
+    @media(max-width:380px){.wrap{width:calc(100% - 24px)}.nav .button{padding:0 12px}.visual{min-height:365px}.phone{width:218px}.screen{min-height:358px}.float-note{font-size:10px;padding:10px 12px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
   </style>
 </head>
 <body>
-  <main>
-    <h1>SHADOWCHAT</h1>
-    <p>A private group invitation</p>
-    <p id="status">Checking invitation...</p>
-    <a id="open" href="#" hidden>Open ShadowChat</a>
-    <p id="error"></p>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="ShadowChat home"><span class="logo" aria-hidden="true">S</span><span>ShadowChat</span></a>
+      <nav class="navlinks" aria-label="Main navigation">
+        <a href="#about">About</a><a href="#getting-started">Getting started</a><a href="#faq">FAQ</a>
+        <a class="button" href="download.html">Get the app <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+  <div class="wrap">
+    <div id="invite" class="invite" role="status" aria-live="polite"></div>
+  </div>
+  <main id="main">
+    <div class="wrap hero" id="top">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="dot" aria-hidden="true"></span> ShadowChat for Android</span>
+        <h1>Good talks.<br><span class="italic">Your people.</span></h1>
+        <p class="lead">ShadowChat is a chat app for the conversations you share with your friends and groups. Start with the people who matter to you.</p>
+        <div class="actions">
+          <a class="button" href="download.html">Download for Android <span aria-hidden="true">↗</span></a>
+          <a class="button outline" href="#about">Get to know ShadowChat</a>
+        </div>
+        <p class="fine">Android APK · Official release · Version 1.0.8</p>
+      </div>
+      <div class="visual" role="img" aria-label="Decorative ShadowChat illustration with a group conversation and invitation">
+        <div class="orbit" aria-hidden="true"></div><span class="spark one" aria-hidden="true"></span><span class="spark two" aria-hidden="true"></span>
+        <div class="phone" aria-hidden="true">
+          <div class="screen">
+            <div class="screen-top"><span>9:41</span><span class="screen-name"><span class="mini-logo">S</span> ShadowChat</span><span>•••</span></div>
+            <div class="chat-label">A place for your conversations</div>
+            <div class="thread"><span class="avatar">✳</span><span class="thread-copy"><span class="thread-title">Your group</span><br><span class="thread-sub">Conversations with your people</span></span><span class="time">•••</span></div>
+            <div class="thread"><span class="avatar">↗</span><span class="thread-copy"><span class="thread-title">Make a connection</span><br><span class="thread-sub">Start with an invitation link</span></span><span class="time">↗</span></div>
+            <div class="invite-chip"><strong>Group invitation</strong>Open a link to join in ShadowChat</div>
+            <div class="status"><i></i> ShadowChat for Android</div>
+          </div>
+        </div>
+        <div class="float-note"><span class="float-icon" aria-hidden="true">↗</span><span>One invite away<br><strong>from joining in</strong></span></div>
+      </div>
+    </div>
   </main>
-
+  <section class="section" id="about">
+    <div class="wrap">
+      <div class="section-head"><span class="kicker">Made for your circle</span><h2>Bring your conversations together.</h2><p class="section-intro">A welcoming place to start chatting with the people you know. Open ShadowChat, join an invitation, and pick up the conversation.</p></div>
+      <div class="cards">
+        <article class="card"><div class="card-icon" aria-hidden="true">✳</div><h3>For groups and friends</h3><p>ShadowChat supports group invitations, so getting your people together can start with a link.</p></article>
+        <article class="card"><div class="card-icon" aria-hidden="true">↗</div><h3>Join from an invite</h3><p>Open a valid invitation link and continue into ShadowChat to join the group.</p></article>
+        <article class="card"><div class="card-icon" aria-hidden="true">◌</div><h3>Android app</h3><p>Download the current Android APK from the official ShadowChat release page.</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="getting-started">
+    <div class="wrap">
+      <div class="section-head"><span class="kicker">A simple start</span><h2>Get in, then get talking.</h2><p class="section-intro">The official Android download and the invitation link work together to get you to your group.</p></div>
+      <div class="steps">
+        <article class="step"><h3>Download ShadowChat</h3><p>Use the download page to get the current APK from the official release.</p></article>
+        <article class="step"><h3>Install on Android</h3><p>Open the downloaded file and follow Android's installation prompts.</p></article>
+        <article class="step"><h3>Open your invite</h3><p>Tap the group invitation link on your Android device to continue into ShadowChat.</p></article>
+      </div>
+      <div class="download-band" style="margin-top:44px">
+        <div><span class="kicker">Ready when you are</span><h2>Meet your people on ShadowChat.</h2><p>Official Android release · Version 1.0.8</p></div>
+        <a class="button" href="download.html">Download ShadowChat <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="section-head"><span class="kicker">Good to know</span><h2>Questions, answered.</h2></div>
+      <div class="faq">
+        <details><summary>Where can I download ShadowChat?</summary><p>Use the <a href="download.html">official download page</a>. It links to the Android APK and the matching GitHub release page as a fallback.</p></details>
+        <details><summary>How do I join a group?</summary><p>Open the invitation link shared by a group member on your Android device. A valid link opens ShadowChat's join flow.</p></details>
+        <details><summary>What if the download does not start?</summary><p>On the download page, choose “Open official release page” and tap the APK listed under Assets. Android may ask you to allow your browser to install apps from this source.</p></details>
+        <details><summary>Is ShadowChat available on iPhone?</summary><p>The verified download currently available here is an Android APK. iPhone availability has not been published.</p></details>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="wrap foot">
+      <a class="brand" href="#top"><span class="logo" aria-hidden="true">S</span><span>ShadowChat</span></a>
+      <span>© <span id="year">2026</span> ShadowChat</span>
+      <nav class="footlinks" aria-label="Footer"><a href="download.html">Android download</a><a href="https://github.com/baghelarnav6-hub/shadow-chat-invites-/issues" target="_blank" rel="noopener noreferrer">Support &amp; feedback</a><a href="https://github.com/baghelarnav6-hub/shadow-chat-invites-" target="_blank" rel="noopener noreferrer">GitHub</a></nav>
+    </div>
+  </footer>
   <script>
-    const params = new URLSearchParams(location.search);
-    const token = params.get("token");
-    const status = document.getElementById("status");
-    const open = document.getElementById("open");
-    const error = document.getElementById("error");
-
-    if (token && /^[0-9a-f]{64}$/i.test(token)) {
-      status.textContent =
-        "Your invitation is ready. Open the app to continue.";
-      open.href =
-        "shadowchat://join?token=" + token.toLowerCase();
-      open.hidden = false;
-    } else {
-      status.textContent = "No valid invitation was found.";
-      error.textContent =
-        "Ask the group member to send you a new invitation link.";
-    }
+    (function(){
+      var params=new URLSearchParams(window.location.search);
+      var token=params.get("token");
+      var invite=document.getElementById("invite");
+      document.getElementById("year").textContent=String(new Date().getFullYear());
+      if(token&&/^[0-9a-f]{64}$/i.test(token)){
+        var label=document.createElement("p");
+        var title=document.createElement("strong");
+        title.textContent="You have a ShadowChat group invitation";
+        label.appendChild(title);
+        label.appendChild(document.createTextNode("Open the app to continue to your group."));
+        var link=document.createElement("a");
+        link.className="button";
+        link.href="shadowchat://join?token="+token.toLowerCase();
+        link.textContent="Open ShadowChat";
+        invite.appendChild(label);
+        invite.appendChild(link);
+        invite.classList.add("show");
+      } else if(token) {
+        var invalid=document.createElement("p");
+        invalid.textContent="This invitation link does not look valid. Ask the group member to send you a new one.";
+        invite.appendChild(invalid);
+        invite.classList.add("show");
+      }
+    })();
   </script>
 </body>
 </html>
-

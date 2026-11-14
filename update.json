@@ -1,7 +1,7 @@
 {
-  "latestVersion": "1.0.8",
+  "latestVersion": "1.0.9",
   "minimumVersion": "1.0.1",
   "downloadUrl": "https://baghelarnav6-hub.github.io/shadow-chat-invites-/download.html",
-  "apkUrl": "https://github.com/baghelarnav6-hub/shadow-chat-invites-/releases/download/shadowchat-v1.0.8/app-release.6.apk",
-  "releaseNotes": "ShadowChat 1.0.8: latest Android release. Download from the official release asset."
+  "apkUrl": "https://github.com/baghelarnav6-hub/shadow-chat-invites-/releases/download/shadowchat-v1.0.9/ShadowChat-1.0.9.apk",
+  "releaseNotes": "ShadowChat 1.0.9: production Android release with the chat composer visibility fix. Download the official APK."
 }
